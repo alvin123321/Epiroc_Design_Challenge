@@ -1,38 +1,54 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #5a5a5a !important;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+}
+.bxs {
+  box-shadow: inset 0px 0px 0 3px #222222;
+}
+.switch {
+  --false: #e81b1b;
+  --true: #00ff00;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="checkbox"] {
+  appearance: none;
+  height: 28px;
+  width: 48px;
+  background-color: #444444;
+  position: relative;
+  border-radius: 0.2em;
+  cursor: pointer;
+  border: 2px solid #222222;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  height: 18.33px;
+  width: 20.33px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: calc(20.33px / 2 + 0.3em);
+  background-color: var(--false);
+  border-radius: 0.2em;
+  transition: 0.3s ease;
+}
+
+input[type="checkbox"]:checked::before {
+  background-color: var(--true);
+  left: calc(100% - (20.33px / 2 + 0.3em));
+}
+
+/* Hide the up and down arrows (spinners) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
