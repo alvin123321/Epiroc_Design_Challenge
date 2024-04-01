@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiFillDashboard } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 interface CardProps {
   isIconOnly: boolean;
@@ -9,6 +10,7 @@ interface CardProps {
 const Footer: React.FC = () => {
   // Array of 10 elements
   const cardArray = Array.from({ length: 10 }, (v, index) => index);
+  const navigate = useNavigate()
 
   return (
     <div className="flex p-[20px] pt-[10px] gap-[20px] flex-col md:flex-row items-center justify-center w-full">
@@ -21,13 +23,13 @@ const Footer: React.FC = () => {
           />
         ))}{" "}
       </div>
-      <div className="  min-w-[100px] h-[60px] flex justify-center">
+      <button onClick={()=>navigate("/")} className="min-w-[100px] h-[60px] flex justify-center">
         <img
           className="w-[60px] h-[58px] object-contain border-[3px] border-[black] rounded-[5px]"
           src={require("../../images/footercenter.png")}
           alt=""
         />
-      </div>
+      </button>
       <div className="border-[3px] border-[black] rounded-[5px] flex flex-wrap gap-1 justify-center p-1 ">
         {cardArray.map((_, index) => (
           <Card

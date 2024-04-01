@@ -1,5 +1,7 @@
 import React from "react";
 import Cards from "../components/cards";
+import { useNavigate } from "react-router-dom";
+
 const cardsData = [
   {
     title: "Operations",
@@ -31,10 +33,12 @@ interface CardData {
   img: string;
 }
 const Home = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="App ">
       <div className="flex justify-center min-h-[100vh] flex-col items-center py-[40px]">
-        <div className="flex max-w-[800px]  justify-center flex-wrap flex-row gap-[50px]">
+        <div onClick={()=>navigate("/system")} className="flex max-w-[800px]  justify-center flex-wrap flex-row gap-[50px]">
           {cardsData.map((card: CardData, index: number) => (
             <Cards key={index} title={card.title} img={card.img} />
           ))}
