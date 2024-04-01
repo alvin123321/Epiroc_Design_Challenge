@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillDashboard } from "react-icons/ai";
 
 interface CardProps {
@@ -42,13 +42,20 @@ const Footer: React.FC = () => {
 };
 
 const Card: React.FC<CardProps> = ({ isIconOnly, hideRightBorder }) => {
+  const [active, setActive] = useState(true);
+  const toggleActive = () => setActive((prev) => !prev);
+  
   return (
     <button
+      onClick={toggleActive}
       className={`w-[57px] h-[60px] flex justify-center items-center bg-[#1A1A1A] ${
         hideRightBorder ? "" : "border-r-[2px] border-r-[#464646]"
       } ${isIconOnly ? "" : "cursor-default"}`}
     >
-      {isIconOnly && <AiFillDashboard color="#00DC23" size={21} />}
+      
+      {isIconOnly && active && <AiFillDashboard color="#00DC23" size={21} />}
+      {isIconOnly && !active && <AiFillDashboard color="red" size={21} />}
+
     </button>
   );
 };

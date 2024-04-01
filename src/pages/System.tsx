@@ -7,77 +7,92 @@ const CardData = [
   {
     heading: <div className="font-semibold text-[16px]">Display</div>,
     title: <></>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: false,
     showToggle: false,
   },
   {
     heading: <></>,
     title: <div>Machine stationary</div>,
-    showSelect: true,
+    showSelectOne: true,
+    showSelectTwo: false,
     showInput: false,
     showToggle: false,
   },
   {
     heading: <></>,
     title: <div>Machine in motion</div>,
-    showSelect: true,
+    showSelectOne: true,
+    showSelectTwo: false,
     showInput: false,
     showToggle: false,
   },
   {
     heading: <></>,
     title: <div>Brightness</div>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: true,
     showToggle: false,
+    unit: <div>cd</div>,
+    placeholder: '12.5'
   },
   {
     heading: <div className="font-semibold text-[16px]">Units</div>,
     title: <></>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: false,
     showToggle: false,
   },
   {
     heading: <></>,
     title: <div>Units of measurement</div>,
-    showSelect: true,
+    showSelectOne: false,
+    showSelectTwo: true,
     showInput: false,
     showToggle: false,
   },
   {
     heading: <div className="font-semibold text-[16px]">Wiper & washer</div>,
     title: <></>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: false,
     showToggle: false,
   },
   {
     heading: <></>,
     title: <div>Wiper interval delay time</div>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: true,
     showToggle: false,
+    unit: <div>s</div>,
+    placeholder: '3'
   },
   {
     heading: <></>,
     title: <div>Front window joystick function</div>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: false,
     showToggle: true,
   },
   {
     heading: <></>,
     title: <div>Rear window joystick function</div>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: false,
     showToggle: true,
   },
   {
     heading: <></>,
     title: <div>Powerframe window joystick function</div>,
-    showSelect: false,
+    showSelectOne: false,
+    showSelectTwo: false,
     showInput: false,
     showToggle: true,
   },
@@ -105,9 +120,11 @@ const System = () => {
                       key={index}
                       heading={data.heading}
                       title={data.title}
-                      showSelect={data.showSelect}
+                      showSelectOne={data.showSelectOne}
                       showInput={data.showInput}
                       showToggle={data.showToggle}
+                      unit={data.unit}
+                      placeholder={data.placeholder}
                     />
                   ))}
                 </div>
@@ -117,7 +134,8 @@ const System = () => {
                       key={index}
                       heading={data.heading}
                       title={data.title}
-                      showSelect={data.showSelect}
+                      showSelectOne={data.showSelectOne}
+                      showSelectTwo={data.showSelectTwo}
                       showInput={data.showInput}
                       showToggle={data.showToggle}
                     />
@@ -129,9 +147,11 @@ const System = () => {
                       key={index}
                       heading={data.heading}
                       title={data.title}
-                      showSelect={data.showSelect}
+                      showSelectOne={data.showSelectOne}
                       showInput={data.showInput}
                       showToggle={data.showToggle}
+                      unit={data.unit}
+                      placeholder={data.placeholder}
                     />
                   ))}
                 </div>

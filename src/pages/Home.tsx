@@ -3,27 +3,27 @@ import Cards from "../components/cards";
 const cardsData = [
   {
     title: "Operations",
-    img: "https://via.placeholder.com/80x80?text=Operations",
+    img: "PiAirplane",
   },
   {
     title: "Cable reel and Camera",
-    img: "https://via.placeholder.com/80x80?text=Cable+reel+and+Camera",
+    img: "PiAirplay",
   },
   {
     title: "Operator",
-    img: "https://via.placeholder.com/80x80?text=Operator",
+    img: "PiAppStoreLogo",
   },
   {
     title: "System",
-    img: "https://via.placeholder.com/80x80?text=System",
+    img: "PiAtom",
   },
   {
     title: "Data & Logs",
-    img: "https://via.placeholder.com/80x80?text=Data+%26+Logs",
+    img: "PiBatteryHighBold",
   },
   {
     title: "Settings",
-    img: "https://via.placeholder.com/80x80?text=Settings",
+    img: "PiCalculatorLight",
   },
 ];
 interface CardData {
